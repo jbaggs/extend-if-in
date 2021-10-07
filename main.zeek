@@ -17,7 +17,6 @@ event Intel::match(s: Seen, items: set[Item])
 			item$indicator_type in extended_if_in[item$meta$source] && 
 			s$where in extended_if_in[item$meta$source][item$indicator_type] )
 			{
-			Reporter::info(fmt("Intel where: %s", s$where));
 			local n = Notice::Info($note=Intel::Notice,
 				$msg = fmt("Intel hit on %s at %s", s$indicator, s$where),
 				$sub = s$indicator);
